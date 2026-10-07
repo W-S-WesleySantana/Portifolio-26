@@ -149,6 +149,8 @@ align-items: center;
 
 }
 
+
+
 `
 
 //SOBRE MIM//
@@ -156,7 +158,7 @@ align-items: center;
 
 export const AboutMe = styled.div`
  
- height: 85vh;
+ height: 100%;
  width: 100%;
  display: flex;
  flex-direction: column;
@@ -166,8 +168,9 @@ export const AboutMe = styled.div`
 
  h2{
     color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     font-size: 2rem;
+    margin-top: 15vh;
  }
 
  p{

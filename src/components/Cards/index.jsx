@@ -1,10 +1,18 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaFigma, FaNode } from "react-icons/fa";
+import { 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaJsSquare, 
+  FaReact, 
+  FaFigma, 
+  FaNode 
+} from "react-icons/fa";
 import { 
     BorderBottom, 
     CardContainer, 
     CardIcon, 
     CardTitle, 
-    Container 
+    Container, 
+    GeneralCashFund
 } from './styles';
 
 function Cards(){
@@ -16,18 +24,26 @@ function Cards(){
         { id: 4, nome: "React", icon: FaReact  },
         { id: 5, nome: "Figma", icon: FaFigma  },
         { id: 6, nome: "NodeJs", icon: FaNode  },
-        
+
+      
     ];
       
     return (
+
+      <GeneralCashFund>
+
+      <h2>Habilidades</h2>
+
         <Container>
-       
+      
           {listaTecnologias.map(({ id, nome, icon: IconComponent }) => (
             <CardContainer key={id}>
               <CardTitle>{nome}</CardTitle>
               
-              <CardIcon>
              
+              <CardIcon>
+              
+            
                 <IconComponent />
 
               </CardIcon>
@@ -36,8 +52,11 @@ function Cards(){
             </CardContainer>
           ))}
         </Container>
+        </GeneralCashFund>
     );
+  
 }
+
 
 export default Cards;
 

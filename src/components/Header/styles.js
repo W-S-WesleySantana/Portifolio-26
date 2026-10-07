@@ -9,7 +9,7 @@ align-items: center;
 border-bottom: 1px solid #6C4AF5;
 color: #fff;
 position: fixed;
-z-index: 1;
+z-index: 10;
 background:  #16161d;
 
 

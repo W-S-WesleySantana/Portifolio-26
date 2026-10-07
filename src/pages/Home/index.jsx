@@ -1,5 +1,10 @@
+
 import Cards from "../../components/Cards";
+import Certificados from "../../components/Certificados";
+import Contacts from "../../components/Contact";
 import Header from "../../components/Header"
+import Projects from "../../components/Projetos";
+import Button from "../../components/Button";
 
 import { AboutMe, Container, LeftBox, RightBox, Slipcase } from "./styles";
 
@@ -22,9 +27,10 @@ function Home() {
 
  
  <div className="ButtonBox">
-    <button className="Curriculo">Dawnload CV</button>
+    
+    <Button label={"Download CV"}  />
 
-    <button className="Contato">Entra Em Contato</button>
+    <Button label={"Entra Em Contato"}/>
 
  </div>
 
@@ -58,6 +64,12 @@ function Home() {
    {/*HABILIDADES */}
       
       <Cards/>
+
+      <Projects limite={3}/>
+
+      <Certificados limite={3}/>
+
+      <Contacts/>
       
 
 
