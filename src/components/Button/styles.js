@@ -9,11 +9,13 @@ export const ButtonBox = styled.div`
 
 export const StyledButton = styled.button`
   padding: ${props => {
+    if (props.size === 'xsmall') return '4px 10px'
     if (props.size === 'small') return '6px 12px';
     if (props.size === 'large') return '14px 28px';
     return '10px 20px'; 
   }};
   font-size: ${props => {
+    if (props.size === 'xsmall') return '10px';
     if (props.size === 'small') return '14px';
     if (props.size === 'large') return '18px';
     return '16px'; 

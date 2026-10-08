@@ -14,7 +14,7 @@ border-top: 1px solid  #6C4AF5;
 border-bottom: 1px solid  #6C4AF5;
 border-radius:15px ;
 
-
+ 
 h2{
     font-size: 2rem;
     margin-bottom: 30px;
@@ -26,9 +26,9 @@ export const ConteinerContact = styled.div`
 display: flex;
 gap: 10px;
 
-
-
-
+@media (max-width: 600px){
+    flex-direction: column;
+}
 
 `
 export const Contatos = styled.a`
@@ -49,6 +49,13 @@ p{
     color:rgb(180, 180, 180);
 }
 
+@media (max-width: 600px){
+   
+
+    width: 200px;
+    padding: 8px;
+}
+
 
 `
 
@@ -67,6 +74,12 @@ transform: scale(0.9);
 &:hover{
     transform: scale(1);
     transition: 1s;
+}
+
+@media (max-width: 600px){
+ 
+    font-size: 30px;
+    padding: 5px;
 }
 
 

@@ -1,16 +1,25 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+
+
+
 `;
 
 export const Title = styled.h2`
-  margin: 15vh auto 0 auto;
+  margin: 5vh auto 0 auto;
   font-size: 2rem;
   color: #fff;
+
+  @media (max-width: 600px){
+ 
+    margin-top: 8vh;
+  }
 `;
 
 export const Subtitle = styled.h3`
@@ -25,7 +34,17 @@ export const ContainerProjects = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 100%;
-  height: auto; 
+  margin: 20px 0 20px 0;
+  
+  @media (max-width: 600px){
+    grid-template-columns: repeat(1,1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+   
+  }
 `;
 
 
@@ -79,6 +98,8 @@ export const ProjectFooter = styled.section`
       background-color:  #4a3894;
     }
   }
+
+
 `;
 
 export const ProjectBox = styled.div`
@@ -193,5 +214,8 @@ export const CloseButton = styled.button`
   &:hover {
     color: #ffffff;
     transform: scale(1.1); 
+
   }
+
+
 `;

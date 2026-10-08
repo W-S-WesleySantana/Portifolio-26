@@ -1,23 +1,55 @@
 import LogoWS from "../../assets/LogoWs.png";
+import Button from "../Button"
+import { useNavigate } from "react-router-dom";
 
-import { Container } from "./styles";
+import { BoxLogoWs, Container, Nav } from "./styles";
 
 function Header() {
+
+  const navigate = useNavigate();
+
+
+
+
   return (
 
     <Container>
 
-    <div className="logoWs">
+    
+
+    <BoxLogoWs className="logoWs">
 
      <img src={LogoWS} alt="Logo WS" />
 
-    </div>
+    </BoxLogoWs>
 
-    <div className="title">
+  
 
-     <h1>Portifolio </h1>
+     <h1>Portfólio </h1>
+ 
+    
 
-    </div>
+      <Nav>
+
+      <Button 
+      label={"Home"}
+      onClick={() => navigate('/')}
+      size={'xsmall'}
+      /> 
+      <Button 
+      label={"Certificados"}
+      onClick={() => navigate('/certificados')}
+      size={'xsmall'}
+      />
+      <Button 
+      label={"Projetos"}
+      onClick={() => navigate('/projetos')}
+      size={'xsmall'}
+      />
+       
+      
+       
+      </Nav>
 
       
     </Container>

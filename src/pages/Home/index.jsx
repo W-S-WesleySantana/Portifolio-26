@@ -1,4 +1,5 @@
-
+import Wsimag from '../../assets/imgWs.png'
+import { FaCss3Alt, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import Cards from "../../components/Cards";
 import Certificados from "../../components/Certificados";
 import Contacts from "../../components/Contact";
@@ -10,67 +11,91 @@ import { AboutMe, Container, LeftBox, RightBox, Slipcase } from "./styles";
 
 function Home() {
 
+  const phoneNumber = '5511971985753'
+  const linkWhatsApp = `https://wa.me/${phoneNumber}`;
+
+    
   return (
     <Container>
 
-   <Header/>
+      <Header />
 
-   <Slipcase>
+      <Slipcase>
 
-    {/*CAIXA A ESQUERDA */}
+        {/*CAIXA A ESQUERDA */}
 
-   <LeftBox>
+        <LeftBox>
 
-   <h2>Olá, eu sou o <br /> <span> Wesley Santana :) </span> </h2>
+          <h2>Olá, eu sou o <br /> <span> Wesley Santana :) </span> </h2>
 
-   <p>Desenvolvedor Front-End | React.js |</p>
+          <p>Desenvolvedor Front-End Jr. <br />
 
- 
- <div className="ButtonBox">
-    
-    <Button label={"Download CV"}  />
+            <FaHtml5 />HTML |
 
-    <Button label={"Entra Em Contato"}/>
+            <FaCss3Alt /> CSS |
 
- </div>
+            <FaJs /> JS |
 
-   </LeftBox>
-
-    {/*CAIXA A DIREITA */}
-
-   <RightBox>
-
-   <a className="MainPhoto" href="https://github.com/W-S-WesleySantana " target="_blank" rel="noopener noreferrer"> Foto</a>
-
-   </RightBox>
-
-   </Slipcase>
-   
-    {/*SOBRE MIM*/}
+            <FaReact /> React.js
+            |</p>
 
 
-   <AboutMe>
-   
-   <h2>Sobre Mim</h2>
+          <div className="ButtonBox">
 
-   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur qui reprehenderit blanditiis sit molestiae, quaerat quidem porro, at, hic quod unde eum asperiores dolor accusamus voluptatum minima earum impedit officia.
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui nulla quisquam cupiditate ex soluta minus obcaecati magni quis fugit labore, aspernatur aliquid. Est deleniti saepe, delectus et quia eligendi!
-   </p>
+            <a href="https://drive.google.com/file/d/1Bwx272pilfspGOY_sCBXmdwWsP1LOHUI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Button
+                label={"Download CV"} />
+            </a>  
+
+            <Button
+              label={"Entra Em Contato"}
+              onClick={() => window.open(linkWhatsApp, '_blank', 'noopener,noreferrer')}
+
+            />
+
+          </div>
+
+        </LeftBox>
+
+        {/*CAIXA A DIREITA */}
+
+        <RightBox>
+
+          <a className="MainPhoto" href="https://github.com/W-S-WesleySantana " target="_blank" rel="noopener noreferrer"> <img src={Wsimag} alt="Imagem Wesley Santana" /></a>
+
+        </RightBox>
+
+      </Slipcase>
+
+      {/*SOBRE MIM*/}
 
 
-   </AboutMe>
+      <AboutMe>
+
+        <h2>Sobre Mim</h2>
+
+        <p>Tenho 25 anos e sou um Desenvolvedor Front-End em transição de carreira, focado em criar interfaces modernas, limpas e responsivas. Estou em busca da minha primeira oportunidade profissional no mercado de tecnologia.
+
+        Sou extremamente pontual e focado no cumprimento rigoroso de prazos.
+        Esforçado, autodidata e em constante aprendizado para entregar códigos de qualidade.
+        Tenho como objetivo atuar em projetos reais onde eu possa colaborar com o time e evoluir minhas habilidades técnicas.
+         
+        </p>
 
 
-   {/*HABILIDADES */}
-      
-      <Cards/>
+      </AboutMe>
 
-      <Projects limite={3}/>
 
-      <Certificados limite={3}/>
+      {/*HABILIDADES */}
 
-      <Contacts/>
-      
+      <Cards />
+
+      <Projects limite={3} />
+
+      <Certificados limite={3} />
+
+      <Contacts />
+
 
 
     </Container>

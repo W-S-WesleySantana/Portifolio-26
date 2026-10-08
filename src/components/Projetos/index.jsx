@@ -1,11 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GwEletronico from "../../assets/ImgProjects/GwEletronicos.png";
+import BapCel from '../../assets/ImgProjects/BapCell.png'
+import Barbearia from '../../assets/ImgProjects/barbearia.png'
 import { 
   Container, Title, Subtitle, ContainerProjects, 
   ProjectBox, ImgProject, ProjectTitle, ProjectFooter,
   ModalOverlay, ModalContainer, CloseButton 
 } from "./styles";
 import Button from "../Button";
+
 
 
 const todosOsProjetos = [
@@ -15,12 +19,33 @@ const todosOsProjetos = [
     name: "Gw Eletronico",
     description: "Este é um projeto de e-commerce completo desenvolvido para a GW Eletrônicos. Conta com carrinho de compras dinâmico, integração com meios de pagamento e um painel administrativo totalmente responsivo."
   },
+  { 
+    id:2 , 
+    img: BapCel  , 
+    name: "BapCell",
+    description:"BapCell é uma plataforma web moderna desenvolvida em React para o gerenciamento e captação de clientes de uma assistência técnica de smartphones. O sistema centraliza a solicitação de orçamentos gratuitos por meio de um formulário dinâmico, direcionando o atendimento de forma ágil diretamente para o WhatsApp. Conta também com seções integradas para exibição de serviços, acessórios em destaque e um painel administrativo para controle interno."
+  },
+  { 
+    id:3 , 
+    img: Barbearia , 
+    name: "Barbearia Da galera",
+    description: "Barbearia da Galera é uma landing page de alta conversão estilo , desenvolvida em React para o setor de estética masculina. O projeto centraliza os canais de contato do estabelecimento (WhatsApp e Instagram), exibe métricas de relevância social (avaliações e agendamentos) e conta com um carrossel interativo para demonstração do portfólio de cortes."
+ },
+
+ // { 
+  //  id: , 
+ //   img: , 
+  //  name: "",
+ //   description: ""
+ // },
  
-]; 
+];  
 
 
 function Projects({ limite }) {
   const [activeProject, setActiveProject] = useState(null);
+
+  const  navigate = useNavigate();
 
 
   const projetosExibidos = limite 
@@ -61,7 +86,12 @@ function Projects({ limite }) {
       )}
 
      
-      {limite && <Button label={"Ver Mais"} />}
+      {limite && 
+      <Button 
+      label={"Ver Mais"} 
+      onClick={() => navigate('/projetos') }
+      
+      />}
     </Container>
   );
 }

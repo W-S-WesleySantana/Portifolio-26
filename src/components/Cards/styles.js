@@ -21,20 +21,27 @@ h2{
   
 }
 
+
+
 `
 
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   padding: 40px;
   justify-content: center;
   align-items: center;
   
+  @media (max-width: 600px){
+  
+     width: 95%;
+     grid-template-columns: repeat(3, 1fr);
+     
+}
 `;
-
-
+ 
 export const CardContainer = styled.div`
   background-color: #1e1e24;
   width: 100px;
@@ -54,9 +61,8 @@ export const CardContainer = styled.div`
     transform: scale(1);
   }
 
-  @media (max-width:500px){
-    width: 100px;
-    height: 100px;
+  @media (max-width:400px){
+    
   }
 
  

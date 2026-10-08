@@ -4,7 +4,9 @@ import {
   FaJsSquare, 
   FaReact, 
   FaFigma, 
-  FaNode 
+  FaNode, 
+  FaGitSquare,
+  FaGithub
 } from "react-icons/fa";
 import { 
     BorderBottom, 
@@ -14,6 +16,7 @@ import {
     Container, 
     GeneralCashFund
 } from './styles';
+import { RiTailwindCssFill } from "react-icons/ri";
 
 function Cards(){
 
@@ -24,9 +27,13 @@ function Cards(){
         { id: 4, nome: "React", icon: FaReact  },
         { id: 5, nome: "Figma", icon: FaFigma  },
         { id: 6, nome: "NodeJs", icon: FaNode  },
+        { id: 7, nome: "GIT", icon: FaGitSquare  },
+        { id: 8, nome: "GitHub", icon: FaGithub  },
+        { id: 9, nome: "TailwindCss", icon: RiTailwindCssFill  },
+      
 
       
-    ];
+    ]; 
       
     return (
 

@@ -12,7 +12,7 @@ function Contacts() {
       rede: "Wesleymemo7@gmail.com",
       url: "mailto:Wesleymemo7@gmail.com"
     },
-    { 
+    {  
       id: 2, 
       Icone: FaWhatsapp, 
       name: "Whatsapp", 
@@ -35,8 +35,10 @@ function Contacts() {
     }
   ];
 
+
+
   return (
-    <Container>
+    <Container >
       <h2>Contatos</h2>
       
 
