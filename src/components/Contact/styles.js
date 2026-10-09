@@ -18,6 +18,13 @@ border-radius:15px ;
 h2{
     font-size: 2rem;
     margin-bottom: 30px;
+   
+}
+
+@media (max-width:600px){
+    h2{
+        margin-top: 5vh;
+    }
 }
 `
 
@@ -28,6 +35,8 @@ gap: 10px;
 
 @media (max-width: 600px){
     flex-direction: column;
+    height: 100vh;
+   
 }
 
 `
@@ -43,25 +52,19 @@ h3{
     font-size: 1.3rem;
     padding: 5px;
 }
-
 p{
     font-size: 1rem;
     color:rgb(180, 180, 180);
 }
 
 @media (max-width: 600px){
-   
 
     width: 200px;
     padding: 8px;
-}
-
-
-`
-
-           
+   
+}`
+      
 export const  IconWrapper = styled.div`
-
 
 font-size: 50px;
 border-radius: 30px;
@@ -80,6 +83,7 @@ transform: scale(0.9);
  
     font-size: 30px;
     padding: 5px;
+    
 }
 
 

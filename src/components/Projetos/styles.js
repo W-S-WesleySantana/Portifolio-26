@@ -2,23 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: auto;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  align-items: center;
+  padding-bottom: 50px;
+  overflow-x: hidden;
 
-
-
+  @media (max-width: 600px) {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 30px;
+  }
 `;
 
 export const Title = styled.h2`
-  margin: 5vh auto 0 auto;
+  margin: 5vh auto 20px auto;
   font-size: 2rem;
   color: #fff;
+  text-align: center;
 
-  @media (max-width: 600px){
- 
-    margin-top: 8vh;
+  @media (max-width: 600px) {
+    margin: 3vh auto 15px auto;
+    font-size: 1.7rem;
   }
 `;
 
@@ -26,27 +33,31 @@ export const Subtitle = styled.h3`
   margin: 0 20px;
   font-size: 1.5rem;
   color: #fff;
+  text-align: center;
 `;
 
 export const ContainerProjects = styled.div`
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  justify-items: center;
+  gap: 20px;
   width: 100%;
-  margin: 20px 0 20px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
   
-  @media (max-width: 600px){
-    grid-template-columns: repeat(1,1fr);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-   
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 20px;
+    padding: 10px 20px;
   }
 `;
-
 
 export const ProjectTitle = styled.div`
   position: absolute;
@@ -54,7 +65,7 @@ export const ProjectTitle = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  color: rgb(255, 255, 255);      
+  color: rgb(255, 255, 255);       
   font-size: 1.5rem; 
   text-align: center;
   font-weight: bold;
@@ -62,6 +73,7 @@ export const ProjectTitle = styled.div`
   z-index: 2; 
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  width: 90%;
 `;
 
 export const ProjectFooter = styled.section`
@@ -74,6 +86,7 @@ export const ProjectFooter = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   z-index: 3;
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
@@ -95,11 +108,9 @@ export const ProjectFooter = styled.section`
     transition: background 0.2s;
 
     &:hover {
-      background-color:  #4a3894;
+      background-color: #4a3894;
     }
   }
-
-
 `;
 
 export const ProjectBox = styled.div`
@@ -122,19 +133,16 @@ export const ProjectBox = styled.div`
     z-index: 1;
     transition: opacity 0.3s ease;
   }
-
   
   &:hover {
     &::before {
       opacity: 0;
     }
-
-  
+ 
     ${ProjectTitle} {
       opacity: 0;
       transform: translate(-50%, -70%);
     }
-
 
     ${ProjectFooter} {
       transform: translateY(0);
@@ -160,17 +168,20 @@ export const ModalOverlay = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 999; 
+  padding: 20px;
+  box-sizing: border-box;
 `;
 
 export const ModalContainer = styled.div`
   background-color: #1e1e1e; 
   color: #ffffff;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   padding: 30px;
   border-radius: 12px;
   position: relative; 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
   animation: modalFadeIn 0.3s ease-out forwards;
 
   h2 {
@@ -214,8 +225,5 @@ export const CloseButton = styled.button`
   &:hover {
     color: #ffffff;
     transform: scale(1.1); 
-
   }
-
-
 `;
