@@ -59,7 +59,7 @@ const todosOsProjetos = [
   { 
     id:7 , 
     img: mario , 
-     name: "Encanodores Mario & Luigi",
+     name: "Encanadores Mario & Luigi",
      description: "Desenvolvimento de uma landing page temática e divertida para prestação de serviços hidráulicos inspirada nos famosos irmãos canalizadores. O projeto combina uma narrativa criativa com foco em conversão rápida para serviços de emergência."
   },
   { 

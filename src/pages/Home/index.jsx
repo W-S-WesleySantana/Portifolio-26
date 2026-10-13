@@ -48,7 +48,7 @@ function Home() {
             </a>  
 
             <Button
-              label={"Entra Em Contato"}
+              label={"Entra em Contato"}
               onClick={() => window.open(linkWhatsApp, '_blank', 'noopener,noreferrer')}
 
             />

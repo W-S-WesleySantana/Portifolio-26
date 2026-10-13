@@ -32,7 +32,7 @@ function Header() {
       <Nav>
 
       <Button 
-      label={"Home"}
+      label={"Inicio"}
       onClick={() => navigate('/')}
       size={'xsmall'}
       /> 
