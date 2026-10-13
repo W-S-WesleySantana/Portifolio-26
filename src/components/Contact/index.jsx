@@ -3,6 +3,8 @@ import { Container, Contatos, ConteinerContact, IconWrapper } from "./styles";
 import { FaGithubSquare, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 function Contacts() {
+
+
  
   const RedesSociais = [
     { 
@@ -17,7 +19,7 @@ function Contacts() {
       Icone: FaWhatsapp, 
       name: "Whatsapp", 
       rede: "(11) 9 7198-5753",
-      url: "https://wa.me.5511971985753" 
+      url: "https://wa.me/5511971985753"
     },
     { 
       id: 3, 

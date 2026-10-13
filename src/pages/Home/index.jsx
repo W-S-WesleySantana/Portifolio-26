@@ -14,7 +14,7 @@ function Home() {
   const phoneNumber = '5511971985753'
   const linkWhatsApp = `https://wa.me/${phoneNumber}`;
 
-    
+     
   return (
     <Container>
 
@@ -90,7 +90,7 @@ function Home() {
 
       <Cards />
 
-      <Projects limite={3} />
+      <Projects limite={4} />
 
       <Certificados limite={3} />
 
